@@ -1,7 +1,3 @@
-{{ if ne .encrypted "yes" }}
-.ssh/config
-.tmate.conf
-{{ end }}
 {{ if eq .chezmoi.os "windows" }}
 .fonts
 .config
