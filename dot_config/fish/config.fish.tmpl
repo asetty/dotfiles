@@ -1,5 +1,10 @@
 # Set default editor
-set -gx EDITOR vim
+if type -q "nvim";
+    set -gx EDITOR nvim
+    alias vim="nvim"
+else;
+    set -gx EDITOR vim
+end
 set PATH /opt/homebrew/bin $PATH
 set PATH /opt/homebrew/sbin $PATH
 set PATH ~/.cargo/bin $PATH
