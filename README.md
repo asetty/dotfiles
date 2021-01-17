@@ -1,5 +1,5 @@
 # dotfiles
-### It is a mistake to think you can solve any major problem with only potatoes.
-My personal configuration files.
+### thank you vidur
+xeesh configuration files
 
-This repository uses [chezmoi](chezmoi.io) to install dotfiles and run scripts.
+This repository uses [chezmoi](https://github.com/twpayne/chezmoi) to install dotfiles and run scripts.
