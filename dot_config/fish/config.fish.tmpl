@@ -9,7 +9,10 @@ fish_vi_key_bindings
 
 set PATH /opt/homebrew/bin $PATH
 set PATH /opt/homebrew/sbin $PATH
-set PATH ~/.cargo/bin $PATH
+set PATH "$HOME"/.cargo/bin $PATH
+
+set GOPATH "$HOME"/go
+set PATH "$HOME"/go/bin $PATH
 
 # Quality-of-Life improvements for interactive shells
 if status --is-interactive
