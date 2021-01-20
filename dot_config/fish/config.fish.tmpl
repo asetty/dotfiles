@@ -7,14 +7,6 @@ set PATH "$HOME"/.cargo/bin $PATH
 set GOPATH "$HOME"/go
 set PATH "$HOME"/go/bin $PATH
 
-# Set default editor
-if type -q "nvim";
-    set -gx EDITOR nvim
-    alias vim="nvim"
-else;
-    set -gx EDITOR vim
-end
-fish_vi_key_bindings
 
 # Quality-of-Life improvements for interactive shells
 if status --is-interactive
@@ -29,6 +21,18 @@ if status --is-interactive
     abbr --add --global sc symfony console
     abbr --add --global d-c docker-compose
     abbr --add --global sbc bin/console
+
+    # Set default editor
+    if type -q "nvim";
+        set -gx EDITOR nvim
+        alias vim="nvim"
+    else;
+        set -gx EDITOR vim
+    end
+
+    # Use vim navigation for terminal input
+    fish_vi_key_bindings
+
     # Use exa instead of ls
     if type -q "lsd" ;
         alias ls="lsd"
