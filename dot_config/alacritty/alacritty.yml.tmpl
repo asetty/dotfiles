@@ -349,7 +349,7 @@ colors:
 #   - (Linux/BSD) user login shell
 #   - (Windows) powershell
 shell:
-  program: "$_ARCH_BREW_PATH }"/bin/fish
+  program: {{ .brew_path }}/bin/fish
   # args:
   #   - -c tmux new -A -s vidur
 

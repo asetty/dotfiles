@@ -1,12 +1,7 @@
-{{- if eq .chezmoi.arch "arm64"  }}
-set _ARCH_BREW_PATH /opt/homebrew
-{{- else }}
-set _ARCH_BREW_PATH /usr/local
-{{- end }}
-set PATH {$_ARCH_BREW_PATH}/bin $PATH
-set PATH {$_ARCH_BREW_PATH}/sbin $PATH
+set PATH {{ .brew_path }}/bin $PATH
+set PATH {{ .brew_path }}/sbin $PATH
 set PATH "$HOME"/.cargo/bin $PATH
-set BYOBU_PREFIX {$_ARCH_BREW_PATH}
+set BYOBU_PREFIX {{ .brew_path }}
 
 set GOPATH "$HOME"/go
 set PATH "$HOME"/go/bin $PATH

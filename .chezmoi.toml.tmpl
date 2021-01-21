@@ -1,7 +1,11 @@
 {{- $name := promptString "Enter your name" -}}
 {{- $email := promptString "Enter the email to use for this deployment" -}}
-
 [data]
     email = "{{ $email }}"
+{{- if eq .chezmoi.arch "arm64"  }}
+    brew_path = "/opt/homebrew"
+{{- else }}
+    brew_path = "/usr/local"
+{{- end }}
 [gpg]
     recipient = "{{ $email }}"
