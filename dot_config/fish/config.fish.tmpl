@@ -1,11 +1,10 @@
 set PATH {{ .brew_path }}/bin $PATH
 set PATH {{ .brew_path }}/sbin $PATH
 set PATH "$HOME"/.cargo/bin $PATH
-set BYOBU_PREFIX {{ .brew_path }}
-
-set GOPATH "$HOME"/go
 set PATH "$HOME"/go/bin $PATH
 
+set -gx BYOBU_PREFIX {{ .brew_path }}
+set -gx GOPATH "$HOME"/go
 
 # Quality-of-Life improvements for interactive shells
 if status --is-interactive
