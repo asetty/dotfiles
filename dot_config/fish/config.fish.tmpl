@@ -1,7 +1,13 @@
+set PATH /usr/local/bin $PATH
 set PATH {{ .brew_path }}/bin $PATH
 set PATH {{ .brew_path }}/sbin $PATH
 set PATH "$HOME"/.cargo/bin $PATH
 set PATH "$HOME"/go/bin $PATH
+
+# Prepend ~/bin to PATH so it can be used to
+# shadow existing executables for testing custom
+# versions
+set PATH "$HOME"/bin $PATH
 
 set -gx BYOBU_PREFIX {{ .brew_path }}
 set -gx GOPATH "$HOME"/go
