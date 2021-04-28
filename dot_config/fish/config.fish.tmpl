@@ -12,6 +12,8 @@ set PATH "$HOME"/bin $PATH
 set -gx BYOBU_PREFIX {{ .brew_path }}
 set -gx GOPATH "$HOME"/go
 
+set G_HOME "$HOME"/home
+
 # Quality-of-Life improvements for interactive shells
 if status --is-interactive
     abbr --add --global a-g ansible-galaxy

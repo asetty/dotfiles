@@ -7,11 +7,11 @@ function g
     set path ""
     switch $location
         case git
-            set path {$HOME}/git
+            set path {$G_HOME}/git
         case notes
-            set path {$HOME}/notes
+            set path {$G_HOME}/notes
         case go
-            set path {$HOME}/go
+            set path {$G_HOME}/go
         case chez
             chezmoi cd
             return 0
